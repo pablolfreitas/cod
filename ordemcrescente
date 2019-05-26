@@ -1,0 +1,47 @@
+algoritmo "ordemcrescente"
+
+// Esse algoritmo ordena os números em ordem crescente
+// Pablo Lopes de Freitas
+// 25/05/2019
+
+
+          var a,b,c : inteiro
+          
+inicio
+      escreval ("Vamos colocar os números em ordem crescente.")
+      escreval ("Digite três números: ")
+      leia (a,b,c)
+      
+      se (a<=b) e (b<c) e (c>a) entao
+         escreval (a,b,c)
+                  fimse
+                  
+      se (a<b) e (b>c)e (c>a) entao
+         escreval (a,c,b)
+                  fimse
+                  
+      se (a>b) e (b>c) entao
+         escreval (c,b,a)
+                  fimse
+                  
+      se (a>b) e (b<c) e (c<a) entao
+         escreval (b,c,a)
+                  fimse
+                  
+      se (a>b) e (b<a) e (c>a) entao
+         escreval (b,a,c)
+                  fimse
+                  
+      se (a<=b) e (c<a) entao
+         escreval (c,a,b)
+                  fimse
+                  
+      se (a<b) e (b=c) entao
+         escreval (a,b,c)
+                  fimse
+                  
+      se (a=c) e (b>a) entao
+         escreval (a,c,b)
+                  fimse
+
+fimalgoritmo

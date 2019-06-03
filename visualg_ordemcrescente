@@ -1,47 +1,56 @@
 algoritmo "ordemcrescente"
 
 // Esse algoritmo ordena os números em ordem crescente
-// Pablo Lopes de Freitas
-// 25/05/2019
+// Pablo Freitas
+// 29/05/2019
 
 
-          var a,b,c : inteiro
-          
+	var 
+		a,b,c : inteiro
+		texto: caracter 40
+
 inicio
       escreval ("Vamos colocar os números em ordem crescente.")
-      escreval ("Digite três números: ")
+      escreval ("Por favor, digite três números: ")
       leia (a,b,c)
-      
+
+      texto <- ("Os números em ordem crescente são: ")
+
       se (a<=b) e (b<c) e (c>a) entao
-         escreval (a,b,c)
+         escreval (texto,a,b,c)
                   fimse
-                  
+
       se (a<b) e (b>c)e (c>a) entao
-         escreval (a,c,b)
+         escreval (texto,a,c,b)
                   fimse
-                  
+
       se (a>b) e (b>c) entao
-         escreval (c,b,a)
+         escreval (texto,c,b,a)
                   fimse
-                  
+
       se (a>b) e (b<c) e (c<a) entao
-         escreval (b,c,a)
+         escreval (texto,b,c,a)
                   fimse
-                  
+
       se (a>b) e (b<a) e (c>a) entao
-         escreval (b,a,c)
+         escreval (texto,b,a,c)
                   fimse
-                  
+
       se (a<=b) e (c<a) entao
-         escreval (c,a,b)
+         escreval (texto,c,a,b)
                   fimse
-                  
+
       se (a<b) e (b=c) entao
-         escreval (a,b,c)
+         escreval (texto,a,b,c)
+                  fimse
+
+      se (a=c) e (b>a) entao
+         escreval (texto,a,c,b)
+                  fimse
+
+      se (a=b) e (b=c) entao
+         escreval (texto,a,b,c)
                   fimse
                   
-      se (a=c) e (b>a) entao
-         escreval (a,c,b)
-                  fimse
 
 fimalgoritmo

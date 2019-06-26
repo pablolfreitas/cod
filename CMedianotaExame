@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/* Linguagem C, calcula a media de quatro notas e nota do exame, considerando media anual 7,
+no exame o minimo e 5. (Se media anual for 4, exame precisa de 6. [10-4=6]). */
 main ()
 {
 	int op, i;

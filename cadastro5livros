@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <conio.h>
+
+int main (){
+	struct cadastro_livro
+	{
+		char obra[60];
+		char autor[60];
+		char editora[60];
+		int cod_livro;
+	};
+	
+	struct cadastro_livro lista[5];
+	int opcao, i, n, x;
+	
+	do {
+		setlocale(LC_ALL, "Portuguese");
+		system("cls");
+		printf(" 1 - Cadastrar novo Livro.\n");
+		printf(" 2 - Mostrar os livros cadastrados.\n");
+		printf(" 0 - Para encerrar.\n\n");
+		printf(" Selecione uma das opções para continuar.\n");
+		scanf("%d", &opcao);
+				
+		switch (opcao){
+			case 1:
+				if (i<=4){
+					system("cls");
+					printf("\n\n---------- Cadastro de Livros ----------\n\n");
+											
+					fflush(stdin);
+					printf("Digite o nome da Obra: \n");
+					fgets(lista[i].obra, 60, stdin);
+
+					printf("Digite o autor: \n");
+					fgets(lista[i].autor, 60, stdin);
+					fflush(stdin);
+	
+					printf("Digite a editora: \n");
+					fgets(lista[i].editora, 60, stdin);
+					fflush(stdin);
+					system("pause");
+					
+					i++;	
+				} else {
+					system("cls");
+					printf("\n\nSistema de cadastro lotado. Não é possível armazenar mais informações!\n");
+					system("pause");					
+				}
+				break;
+			case 2:
+				if (i == 0){
+					system("cls");
+					printf("\n\nLista vazia!\n\n");
+					system("pause");
+				} else {
+					for (x=0; x < i; x++){
+						lista[x].cod_livro = x+100;
+						printf("\n\n---------- Livro ----------\n\n", i);
+						printf("Código....: %d\n", lista[x].cod_livro);
+						printf("Obra......: %s", lista[x].obra);
+						printf("Autor.....: %s", lista[x].autor);
+						printf("Editora...: %s\n", lista[x].editora);
+				}
+					system("pause");
+				}
+				break;
+			case 0:
+					system("cls");
+					printf("\n\nEncerrando atividade.\n\n");
+					getch();
+				break;
+			default:
+					system("cls");
+					printf("\n\nErro: opção inválida!\n");
+					getch();
+				break;
+		}
+	} while (opcao != 0);
+	return(0);
+}
